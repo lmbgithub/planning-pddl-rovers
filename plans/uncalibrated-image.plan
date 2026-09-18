@@ -1,0 +1,12 @@
+; A plan that images objective0 with a camera calibrated for objective1.
+;
+; Valid under domains/v1-battery.pddl, because its `(calibrated ?c ?r)`
+; predicate does not record *what* the camera was calibrated for.
+; Rejected by domains/v2-calibration-fix.pddl, where the predicate carries
+; the objective.
+;
+; No planner produced this. It was written to demonstrate that a model can
+; accept a plan that the physical system it describes would not.
+(navigate-bat rover0 waypoint3 waypoint1 bat0 b4 b4 b3)
+(calibrate rover0 camera0 objective1 waypoint1)
+(take_image rover0 waypoint1 objective0 camera0 high_res)

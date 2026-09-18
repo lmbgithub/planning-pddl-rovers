@@ -1,0 +1,57 @@
+Planning service: https://solver.planning.domains:5001/package/dual-bfws-ffparser/solve
+Domain: Rover-batteryp4, Problem: roverprob1234p4
+ --- OK.
+ Match tree built with 278 nodes.
+
+PDDL problem description loaded: 
+	Domain: ROVER-BATTERYP4
+	Problem: ROVERPROB1234P4
+	#Actions: 278
+	#Fluents: 53
+Goals found: 6
+Goals_Edges found: 6
+Starting search with 1-BFWS...
+--[6 / 0]--
+--[6 / 3]--
+--[6 / 4]--
+--[6 / 6]--
+--[5 / 0]--
+--[5 / 3]--
+--[5 / 4]--
+--[5 / 6]--
+--[5 / 7]--
+--[4 / 0]--
+--[4 / 6]--
+--[3 / 0]--
+--[3 / 8]--
+--[2 / 0]--
+--[2 / 3]--
+--[1 / 0]--
+--[1 / 3]--
+--[0 / 0]--
+--[0 / 3]--
+Total time: 0.000596907
+Nodes generated during search: 152
+Nodes expanded during search: 33
+Plan found with cost: 13
+Fast-BFS search completed in 0.000596907 secs
+
+
+Plan found:
+0.00000: (SAMPLE_ROCK ROVER1 ROVER1STORE WAYPOINT3)
+0.00100: (COMMUNICATE_ROCK_DATA ROVER1 GENERAL WAYPOINT3 WAYPOINT3 WAYPOINT0)
+0.00200: (TOW ROVER1 ROVER0 WAYPOINT3 WAYPOINT0 BAT1 B4 B4 B3)
+0.00300: (NAVIGATE-BAT ROVER1 ROVER0 WAYPOINT0 WAYPOINT1 BAT1 BAT0 B4 B4 B3 B4 B2 B3)
+0.00400: (TOW ROVER0 ROVER1 WAYPOINT1 WAYPOINT2 BAT0 B4 B3 B2)
+0.00500: (SAMPLE_SOIL ROVER0 ROVER0STORE WAYPOINT2)
+0.00600: (COMMUNICATE_SOIL_DATA ROVER0 GENERAL WAYPOINT2 WAYPOINT2 WAYPOINT0)
+0.00700: (CALIBRATE ROVER1 CAMERA1 OBJECTIVE0 WAYPOINT2)
+0.00800: (TAKE_IMAGE ROVER1 WAYPOINT2 OBJECTIVE0 CAMERA1 COLOUR)
+0.00900: (COMMUNICATE_IMAGE_DATA ROVER1 GENERAL OBJECTIVE0 COLOUR WAYPOINT2 WAYPOINT0)
+0.01000: (CALIBRATE ROVER0 CAMERA0 OBJECTIVE1 WAYPOINT2)
+0.01100: (TAKE_IMAGE ROVER0 WAYPOINT2 OBJECTIVE1 CAMERA0 HIGH_RES)
+0.01200: (COMMUNICATE_IMAGE_DATA ROVER0 GENERAL OBJECTIVE1 HIGH_RES WAYPOINT2 WAYPOINT0)
+Metric: 0.012000000000000004
+Makespan: 0.012000000000000004
+States evaluated: undefined
+Planner found 1 plan(s) in 7.345secs.

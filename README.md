@@ -1,12 +1,13 @@
-# planning-pddl-rovers — a plan can be valid and still be wrong
+# planning-pddl-rovers
 
 PDDL models of a rovers planning task, refined across three variants, with a
-**plan validator** written to check them.
+plan validator written to check them.
 
-The finding the repository is built around: domain v1 accepts a plan in which a
-rover photographs an objective its camera was never calibrated for. Every
-precondition is satisfied. A planner cannot detect this, and neither can a plan
-validator — the plan is valid *against a model that is wrong*.
+The project is built around a modelling lesson worth seeing in full: in domain
+v1, a plan where a rover photographs an objective its camera was never
+calibrated for satisfies every precondition. The plan is valid, the planner is
+correct, and the validator agrees — because the model itself is wrong. The later
+variants fix it, and the validator makes the difference concrete.
 
 **Zero dependencies. 131 tests.**
 
